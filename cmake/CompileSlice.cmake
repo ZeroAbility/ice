@@ -8,7 +8,7 @@
 # output_file - generated source output file name
 
 function(CompileSlice slice2bin_params slice_include_paths ice_file output_dir output_file)
-  set(depfile "${output_dir}/${ice_name}.d"
+  set(depfile "${output_dir}/${ice_name}.d")
   if(EXISTS "${depfile}")
     file(STRINGS "${depfile}" ice_children)
     list(POP_FRONT ice_children)
